@@ -1,8 +1,8 @@
 import { Composer, Context, Telegraf } from "telegraf";
-
-import { env } from "./env.js";
 import { Update } from "telegraf/types";
 import cron from "node-cron";
+
+import { env } from "./env.js";
 import { Commands } from "./help.js";
 
 interface WeatherBot {}
@@ -14,6 +14,19 @@ export class WeatherBotImpl implements WeatherBot {
     console.log("STARTING BOT...");
     this.bot.command("quit", async (ctx) => await ctx.leaveChat());
     this.bot.launch();
+  }
+
+  public setCommandsMenu(commands: Record<Commands, string>) {
+    this.bot.telegram.setMyCommands(
+      Object.entries(commands)
+        .filter(([command]) => command !== "start")
+        .map(([command, description]) => ({
+          command,
+          description,
+        }))
+    );
+
+    return this;
   }
 
   public addCommand(
