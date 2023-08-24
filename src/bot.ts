@@ -1,9 +1,9 @@
 import { Composer, Context, Telegraf } from "telegraf";
 
-import { env } from "./env";
-import { Commands } from "./help";
+import { env } from "./env.js";
 import { Update } from "telegraf/types";
 import cron from "node-cron";
+import { Commands } from "./help.js";
 
 interface WeatherBot {}
 
