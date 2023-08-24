@@ -1,0 +1,5 @@
+services:
+  telegrab_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
