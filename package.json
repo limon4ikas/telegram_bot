@@ -1,31 +1,33 @@
 {
-  "name": "telegram_bot",
-  "version": "1.0.0",
-  "description": "",
-  "exports": "./index.js",
-  "type": "module",
-  "scripts": {
-    "start": "pnpm run build && node dist/index.js",
-    "dev": "nodemon -x node --loader ts-node/esm ./src/index.ts",
-    "build": "tsc"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^20.5.4",
-    "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "@types/node-cron": "^3.0.8",
-    "dotenv": "^16.3.1",
-    "ky": "^0.33.3",
-    "ky-universal": "^0.12.0",
-    "node-cron": "^3.0.2",
-    "openai": "^4.2.0",
-    "remeda": "^1.25.2",
-    "telegraf": "^4.12.2",
-    "zod": "^3.22.2"
-  }
+	"name": "telegram_bot",
+	"version": "1.0.0",
+	"description": "",
+	"exports": "./index.js",
+	"type": "module",
+	"scripts": {
+		"start": "pnpm run build && node dist/index.js",
+		"dev": "nodemon -x node --loader ts-node/esm ./src/index.ts",
+		"build": "tsc",
+		"format": "prettier . --write"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.5.4",
+		"nodemon": "^3.0.1",
+		"prettier": "^3.0.3",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6"
+	},
+	"dependencies": {
+		"@types/node-cron": "^3.0.8",
+		"dotenv": "^16.3.1",
+		"ky": "^0.33.3",
+		"ky-universal": "^0.12.0",
+		"node-cron": "^3.0.2",
+		"openai": "^4.2.0",
+		"remeda": "^1.25.2",
+		"telegraf": "^4.12.2",
+		"zod": "^3.22.2"
+	}
 }
